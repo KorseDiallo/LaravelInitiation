@@ -25,6 +25,9 @@ Route::get('/', function () {
 
 Route::get('/tache', [TacheController::class,"getListe"]);
 
+Route::get('/tache/nouveau', [TacheController::class,"create"]);
+
+Route::post('/tache/save', [TacheController::class,"save"]);
 
 Route::get("/tache/{id}/details",[TacheController::class,"show"]);
 

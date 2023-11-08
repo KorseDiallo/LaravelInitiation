@@ -30,4 +30,27 @@ class TacheController extends Controller
         return back();
     }
 
+    public function create(){
+        return view("nouveau");
+    }
+
+    public function save(Request $req){
+       $tache= new Tache();
+
+       $tache->nom_tache=$req->nom;
+       $tache->description_tache=$req->description;
+       $tache->date_echeance=$req->date;
+       $tache->priorite=$req->priorite;
+
+       if($req->termine){
+            $tache->is_terminer=1;
+       }else{
+            $tache->is_terminer=0;
+       }
+        
+       if($tache->save()){
+            return redirect("/tache");
+       }
+    }
+
 }
