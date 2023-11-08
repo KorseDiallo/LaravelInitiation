@@ -25,3 +25,7 @@ Route::get('/', function () {
 
 Route::get('/tache', [TacheController::class,"getListe"]);
 
+
+Route::get("/tache/{id}/details",[TacheController::class,"show"]);
+
+Route::get("/tache/termine/{id_tache}",[TacheController::class,"terminer"]);

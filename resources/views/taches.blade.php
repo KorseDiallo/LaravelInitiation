@@ -20,7 +20,7 @@
                     <h5 class="card-title">Nom de la Tâche :{{$tache->nom_tache}}</h5>
                     <h6 class="card-subtitle mb-2 text-body-secondary">Card subtitle</h6>
                     <p class="card-text">{{$tache->description_tache}}</p>
-                    <a href="#" class="card-link">Modifier</a>
+                    <a href="/tache/{{$tache->id}}/details" class="card-link">Voir Details</a>
                     <a href="#" class="card-link">Supprimer</a>
                 </div>
             </div>
