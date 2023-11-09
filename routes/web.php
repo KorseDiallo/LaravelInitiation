@@ -32,3 +32,8 @@ Route::post('/tache/save', [TacheController::class,"save"]);
 Route::get("/tache/{id}/details",[TacheController::class,"show"]);
 
 Route::get("/tache/termine/{id_tache}",[TacheController::class,"terminer"]);
+
+Route::get("/tache/modifier/{id}",[TacheController::class,"modifier"]);
+
+Route::post("/tache/modifier",[TacheController::class,"update"]);
+
